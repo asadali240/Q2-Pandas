@@ -1,0 +1,47 @@
+
+book: ( python for Data Analysis) 
+chapter 6
+
+we will discuss about the chapter 5 mostly talking about the text format i.e; csv, html, different tabular formats.
+in the cvs file the data shown in seperate with the (,) quoma, in the tabular file the data / filed have one tabe space.
+
+the key points are: Data Loading, Storage and File formats. 
+Topics:-
+- Data reading and writing in text formats and parsing functions in pandas.
+- read_csv = load delimited data from a file url or fule-like, object use comma as default delimiter.
+-read_excel = read tabular data from an excel XLS or XLSX file.
+- read_html = read all tables found in the given html documents.
+
+common option on these functions:-
+
+- Indexing: 
+can treat one or more columns as the returned DataFrame, and whether the get column from the file, the use or not at all.
+
+-values conversion:
+this include the user define values, values conversion and customs list of missing values markers 
+
+- datetime parsing 
+includes combining cabability,including combining date and time information spread over multiple columns into a single columns in the result.
+
+-iterating 
+supporiting for iterating over chinks and very large files.
+
+- unclean data issues
+skipping rows or a footer, comments or other minor things like numeric data with thousand seperated commas.
+
+data parsing is the method which have python transform the data one format / raw data into the readable format.
+
+- when we load the csv file the DataFrame will use heading name as the columns in the DataFrame i.e Id< Name, Subject these will be used as columns in the DataFrame.
+- skiprow method: this method will skip the selected row from the csv file usage e.g (skiprow = 1)  
+- Note: if in the csv file or other have not a header include then you can use (header = None) method to read the csv file wihout header.
+
+- we also apply the 2 more methods 1 is (set_index() ) 2 - is (reset_index () ) 
+*now they will do the set index will convert the coulmn selected by you i.e set_index("id") into the    
+default index if we want to permenant keep this as a index we must use the inplace = True method.
+* the reset_index will revert the changes in the set_index () method.
+
+-Hierarchical Index (pg-170)
+* we can also use the (index_col) for given manual index and here is surprise that we also two index columns keys i.e (index_col = ["one", "two"] ) this is the example of index columns. 
+
+
+
