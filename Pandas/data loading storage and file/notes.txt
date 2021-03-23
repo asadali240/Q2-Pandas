@@ -35,13 +35,42 @@ data parsing is the method which have python transform the data one format / raw
 - skiprow method: this method will skip the selected row from the csv file usage e.g (skiprow = 1)  
 - Note: if in the csv file or other have not a header include then you can use (header = None) method to read the csv file wihout header.
 
-- we also apply the 2 more methods 1 is (set_index() ) 2 - is (reset_index () ) 
+- we also apply the 2 more methods 1 is (set_index() ) 2 - is (reset_index () ) :
 *now they will do the set index will convert the coulmn selected by you i.e set_index("id") into the    
-default index if we want to permenant keep this as a index we must use the inplace = True method.
+
+-default index if we want to permenant keep this as a index we must use the inplace = True method.:
 * the reset_index will revert the changes in the set_index () method.
 
--Hierarchical Index (pg-170)
+-Hierarchical Index (pg-170):
 * we can also use the (index_col) for given manual index and here is surprise that we also two index columns keys i.e (index_col = ["one", "two"] ) this is the example of index columns. 
+
+- Reading TXT File: 
+* when accesss  the data from the txt file with using (list (open(txt)) method the data cant access as per table format 
+* so will use the pd.read_table ("txt") method which will show the data in the table format and we will to use the "\s+" argument to remove the white spaces
+  b/w the tow columns.
+* we can also read the txt file using the (read_csv) method but we must give the "\t+" argument.
+
+-Hiding the Index: 
+ we can also hide the using (df.style.hide_index()) method which will hide / remove the index from the csv file, but you cant print with this method using the 
+ print () method but you can use the display() method.
+
+# dropna() method
+- parameters 
+         -dropna() method by default drop all rows which have atleast 1 NaN value, the default 
+         value of dropna(how = "any", axis = 0)
+        
+        -how = "any" / all, axis = 0/1, any with axis =0 drop all the rows which have atleast 
+        one NaN and all will drop the column with axis = 1 which have all rows /columns 
+        have NaN 
+        
+        -subset = [give the mutiple columns names] it will drop the entire given column 
+        
+        -thres = 2, if in the row have atleast 2 NaN values then this row cant be droped 
+        
+        -inplace = True, this parameter will change in original data frame permentatly.
+          
+
+
 
 
 
